@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Edit Feedback{% endblock %}
+{% block header %} Edit Feedback {% endblock %}
+{% block main %}  
+    <form method='POST' action='/users/{{ username }}/feedback/{{ id }}/edit'>
+        {{ form.hidden_tag() }}
+        <div class='feedback-form-div'>
+            {{ form.title.label }}
+            {{ form.title }}
+            {% for error in form.title.errors %}
+                <small>
+                    {{ error }}
+                </small>
+            {% endfor %}
+            
+            {{ form.content.label }}
+            {{ form.content }}
+            {% for error in form.title.errors %}
+                <small>
+                    {{ error }}
+                </small>
+            {% endfor %}
+
+            <button>Submit</button>
+        </div>
+    </form>
+{% endblock %}
+

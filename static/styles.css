@@ -1,0 +1,12 @@
+.button-bar {
+    width: 8%;
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+}
+
+nav {
+    background-color: bisque;
+    color: white;
+    height: 8vh;
+    padding: 10px;
+}
